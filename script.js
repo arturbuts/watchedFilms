@@ -55,4 +55,22 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
-console.log(personalMovieDB)
+
+function showMyBD(hidden) {
+	if(!hidden) {
+		console.log(personalMovieDB)
+	}
+}
+
+showMyBD(personalMovieDB.privat);
+
+
+function writeYourGeneres() {
+
+	for(let i = 1; i <= 3; i++) {
+		let favoriteGenres = prompt(`Ваш любимый жанр под номером ${i}`)
+		personalMovieDB.genres[i-1] = favoriteGenres
+	}
+}
+
+writeYourGeneres();
